@@ -7,4 +7,37 @@ body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
 .project-card{min-width:0}.project-visual{isolation:isolate}.project-visual:focus-visible{outline:3px solid var(--focus);outline-offset:5px}.project-meta h3{font-size:1.12rem}.service-card{min-width:0}.service-card p{max-width:31ch}.service-featured p{max-width:25ch}.about-columns p{font-size:1.02rem;line-height:1.8}.skills-list>div{transition:background .25s var(--ease),padding .25s var(--ease)}.skills-list>div:hover{padding-inline:1rem;background:rgb(255 255 255 /.04)}
 .project-visual{display:block;cursor:pointer;text-decoration:none}.image-slot{position:absolute;inset:1.2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;padding:1rem;border:1.5px dashed rgb(21 19 25 /.32);border-radius:calc(var(--radius) - .55rem);background:rgb(255 255 255 /.18);color:var(--ink);text-align:center;transition:background .25s var(--ease),border-color .25s var(--ease)}.image-slot b{font-size:clamp(1rem,2vw,1.3rem);letter-spacing:-.04em}.image-slot small{max-width:32ch;font-size:.72rem;line-height:1.45;opacity:.72}.project-visual:hover .image-slot{background:rgb(255 255 255 /.42);border-color:var(--purple)}.visual-video .image-slot{color:#fff;border-color:rgb(255 255 255 /.55);background:rgb(255 255 255 /.08)}.visual-video:hover .image-slot{background:rgb(255 255 255 /.15)}
 .quote-card{transition:transform .25s var(--ease),box-shadow .25s var(--ease)}.quote-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgb(31 22 41 /.08)}.contact-section{padding-block:clamp(105px,12vw,165px)}.contact-inner>p:not(.eyebrow){font-size:1.04rem}.footer a:hover,.text-link:hover{color:var(--purple)}
-.js .reveal{opacity:0;transform:translateY(20px)}.js .reveal.is-visible{opacity:1;transform:none}@media (hover:none){.service-card:hover,.quote-card:hover,.button:hover{transform:none}.skills-list>div:hover{padding-inline:0;background:transparent}}@media(max-width:760px){.hero{min-height:auto;padding-top:112px}.hero-copy{padding-block:0}.hero-lede{font-size:1rem}.hero-proof{gap:0;justify-content:space-between}.hero-proof div{min-width:30%}.hero-art{margin-top:8px}.section-heading.split{gap:0}.section-heading.split>p{margin-bottom:0}.about-columns p{font-size:.98rem}.project-meta h3{font-size:1rem}.contact-links a{padding:.5rem}.footer{padding-block:2rem}}@media(max-width:390px){.hero-proof dt{font-size:1.22rem}.hero-proof dd{font-size:.61rem}.button-row{align-items:stretch}.button{width:100%}.card-top{transform:scale(.9);transform-origin:right top}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none}}
+.js .reveal{opacity:0;transform:translateY(20px)}.js .reveal.is-visible{opacity:1;transform:none}@media (hover:none){.service-card:hover,.quote-card:hover,.button:hover{transform:none}.skills-list>div:hover{padding-inline:0;background:transparent}}@media(max-width:760px){.hero{min-height:auto;padding-top:112px}.hero-copy{padding-block:0}.hero-lede{font-size:1rem}.hero-proof{gap:0;justify-content:space-between}.hero-proof div{min-width:30%}.hero-art{margin-top:8px}.section-heading.split{gap:0}.section-heading.split>p{margin-bottom:0}.about-columns p{font-size:.98rem}.project-meta h3{font-size:1rem}.contact-links a{padding:.5rem}.footer{padding-block:2rem}}
+
+/* About section layout and readability improvements */
+.about-grid{display:grid;grid-template-columns:1fr 420px;gap:2.5rem;align-items:start}
+.about-grid .section-label{max-width:none;text-align:left}
+.about-content{max-width:760px}
+@media (max-width:900px){
+	.about-grid{grid-template-columns:1fr}
+	.about-content{max-width:none}
+}
+
+/* About visual (right column) */
+.about-visual{display:flex;align-items:center;justify-content:center}
+.about-orb{width:340px;height:340px;border-radius:1rem;background:linear-gradient(135deg,var(--purple),#b78bff);box-shadow:0 28px 60px rgba(17,12,36,.14);position:relative;animation:aboutFloat 6s ease-in-out infinite}
+.about-orb::after{content:'';position:absolute;inset:20%;border-radius:50%;background:rgba(255,255,255,.06);filter:blur(10px)}
+@keyframes aboutFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+/* Small animated divider next to the ABOUT heading */
+.decorative-divider{width:56px;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--purple),#b78bff);margin:.6rem 0 1rem 0;animation:dividerSlide 2.8s ease-in-out infinite}
+@keyframes dividerSlide{0%{transform:translateX(-6px);opacity:.85}50%{transform:translateX(6px);opacity:1}100%{transform:translateX(-6px);opacity:.85}}
+
+/* Vertical accent bar beside the about paragraph */
+.about-columns{position:relative;padding-left:1.25rem}
+.about-columns::before{content:'';position:absolute;left:0;top:.5rem;bottom:.5rem;width:6px;border-radius:3px;background:linear-gradient(180deg,var(--purple),var(--purple-dark));box-shadow:0 8px 18px rgba(124,58,237,.12);animation:accentPulse 3.6s ease-in-out infinite}
+@keyframes accentPulse{0%{opacity:.85;transform:scaleY(.98)}50%{opacity:1;transform:scaleY(1.02)}100%{opacity:.85;transform:scaleY(.98)}}
+
+@media(max-width:900px){
+	.decorative-divider{display:none}
+	.about-columns{padding-left:0}
+	.about-columns::before{display:none}
+}
+
+/* Footer brand is now in markup; no override needed */
+.footer .brand{color:inherit}
