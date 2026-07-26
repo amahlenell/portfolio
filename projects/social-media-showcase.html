@@ -1,1 +1,215 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Roofcraft social media case study concept."><title>Roofcraft social - Case study</title><link rel="icon" href="../assets/images/favicon.svg"><link rel="stylesheet" href="../assets/css/project.css"></head><body><a class="skip" href="#main">Skip to content</a><nav class="nav shell"><a class="brand" href="../index.html">A<span>*</span>N</a><a class="back" href="../index.html#work"><- All work</a></nav><main id="main"><header class="hero shell"><p class="eyebrow">Social media strategy - Illustrative case study</p><h1>Roofcraft social</h1><p class="intro">A complete social media framework for Roofcraft, designed to turn a practical local service into a recognisable brand presence across multiple platforms.</p></header><img class="cover" src="../assets/images/project-social.svg" alt="Illustrative social media post designs"><section class="case"><div class="shell case-grid"><div class="label"><span>01</span> Overview</div><div><h2>A content engine made for the platforms people actually use.</h2><p>This showcase demonstrates how Roofcraft’s social presence can be organised across Instagram, Facebook, LinkedIn and TikTok. The system gives each platform a role, keeps the brand visually coherent, and translates a monthly marketing goal into a dependable rhythm of useful, engaging posts.</p><div class="info"><div><b>Channels</b><span>Instagram, Facebook, LinkedIn, TikTok</span></div><div><b>Cadence</b><span>12-16 posts monthly</span></div><div><b>Deliverables</b><span>Strategy, calendar, assets, reporting</span></div></div></div></div></section><section class="full"><div class="shell challenge-grid"><div><p class="label"><span>02</span> Challenge</p><h2>Move from inconsistent posting to a recognisable point of view.</h2></div><ul><li>Translate one brand story for four distinct platform behaviours</li><li>Build enough variety to stay relevant without losing consistency</li><li>Make planning, approvals and performance reporting easier to manage</li></ul></div></section><section class="case"><div class="shell case-grid"><div class="label"><span>03</span> System</div><div><p>Content is arranged around four repeatable pillars: insight, proof, personality and invitation. A monthly calendar maps each post to a purpose; adaptable Canva templates maintain the visual language; short-form edits make campaign ideas travel further. Reporting then feeds the strongest themes back into the next month's plan.</p><div class="tags"><span>Canva</span><span>Meta Business Suite</span><span>Buffer</span><span>ChatGPT</span><span>Claude</span><span>CapCut</span><span>Analytics</span></div></div></div></section><section class="full"><div class="shell"><p class="label"><span>04</span> What it enables</p><div class="result-grid"><div class="result"><strong>One</strong><span>connected voice across priority channels</span></div><div class="result"><strong>Monthly</strong><span>visibility into engagement and content themes</span></div><div class="result"><strong>Reusable</strong><span>templates and workflow for a faster team</span></div></div><p class="note">This is an illustrative portfolio concept. Use real, permissioned analytics and outcomes for a client case study.</p></div></section></main><section class="cta"><div class="shell"><h2>Ready for a social<br>presence with purpose?</h2><p>Let's turn your content into a consistent growth asset.</p><a class="button" href="mailto:hello@yourdomain.com">Start a conversation -></a></div></section><footer class="footer"><div class="shell"><span>(c) 2026 Amani N.</span><a href="../index.html">Home</a></div></footer></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Roofcraft Social Media — a case study in building a trusted roofing brand across TikTok, Facebook and Instagram, by Amy Nell."><meta name="author" content="Amy Nell"><meta name="theme-color" content="#7c3aed"><title>Roofcraft Social Media | Amy Nell</title><link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/project.css"><link rel="stylesheet" href="../assets/css/refinements.css">
+<style>
+/* Page-specific additions for the Roofcraft social case study. Built on the shared
+   design tokens from style.css / project.css — no values invented outside that system. */
+.hero{display:block;overflow:visible;min-height:auto;position:relative}
+.hero-orb{position:absolute;top:-40px;right:-20px;width:130px;height:130px;z-index:0;opacity:.85}
+
+/* Platforms & strategy: flat numbered rows, matching the challenge-grid language
+   already used elsewhere on the site — no boxed cards, just hairline dividers. */
+.flat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 2.5rem;margin-top:2.5rem;counter-reset:row}
+.flat-grid.cols-4{grid-template-columns:repeat(4,1fr)}
+.flat-row{padding:1.1rem 0;border-top:1px solid var(--line)}
+.flat-row:before{content:'0' counter(row);counter-increment:row;color:var(--purple);font:.7rem 'DM Mono',monospace;display:block;margin-bottom:.6rem}
+.flat-row h3,.flat-row b{display:block;font-size:1rem;letter-spacing:-.02em;margin:0 0 .15rem}
+.flat-row p.platform-role{margin:0 0 .8rem;color:var(--purple);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.flat-row ul{margin:0;padding-left:1.05rem;color:#49444e;font-size:.87rem;line-height:1.7}
+.flat-row p{margin:0;color:var(--muted);font-size:.87rem;max-width:none}
+
+.gallery{column-count:3;column-gap:1rem;margin-top:2.5rem}
+.gallery-item{position:relative;break-inside:avoid;margin-bottom:1rem;border-radius:1rem;overflow:hidden;background:var(--wash)}
+.gallery-item.h-tall{height:340px}.gallery-item.h-mid{height:260px}.gallery-item.h-short{height:190px}
+.gallery-item .image-slot{transition:background .25s var(--ease),border-color .25s var(--ease)}
+.gallery-item:hover .image-slot{background:rgb(255 255 255 /.55);border-color:var(--purple)}
+
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
+.visual-video{position:relative;aspect-ratio:16/9;border-radius:1rem;overflow:hidden;background:#18151e;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.visual-video:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgb(31 22 41 /.18)}
+.play-button{position:relative;z-index:1;width:52px;height:52px;border-radius:50%;background:rgb(255 255 255 /.14);border:1.5px solid rgb(255 255 255 /.5);display:grid;place-items:center;margin-bottom:.3rem}
+.play-button:after{content:'';border-style:solid;border-width:8px 0 8px 13px;border-color:transparent transparent transparent #fff;margin-left:3px}
+.video-caption{margin-top:.6rem;font-size:.85rem;color:var(--muted)}
+
+@media(max-width:900px){.flat-grid,.video-grid{grid-template-columns:1fr}.flat-grid.cols-4{grid-template-columns:1fr 1fr}.gallery{column-count:2}}
+@media(max-width:650px){.flat-grid.cols-4{grid-template-columns:1fr}.gallery{column-count:1}}
+</style>
+</head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header><nav class="nav shell" aria-label="Project navigation"><a class="brand" href="../index.html">amynell<span>.</span></a><a class="back" href="../index.html#work">&larr; Back to projects</a></nav></header>
+
+<main id="main">
+
+<section class="hero shell">
+  <p class="eyebrow"><span class="status-dot"></span> Case study &mdash; Social media strategy</p>
+  <h1 class="reveal">Roofcraft Social Media</h1>
+  <p class="intro reveal">Building a trusted roofing brand through strategic content, engaging storytelling and consistent social media management across TikTok, Facebook and Instagram.</p>
+  <div class="about-orb hero-orb" aria-hidden="true"></div>
+  <div class="cover-frame reveal">
+    <div class="cover-card">
+      <img class="cover-image" src="../assets/images/RoofCraft-fb-ph-lap.png" alt="Roofcraft social media posts displayed across phone and laptop mockups">
+      <img class="cover-phone" src="../assets/images/Roofcraft-tiktok-laptop.png" alt="Roofcraft TikTok content shown on a laptop screen">
+    </div>
+  </div>
+</section>
+
+<section class="case">
+  <div class="shell case-grid">
+    <div class="reveal">
+      <p class="label"><span>01</span> Overview</p>
+      <h2>One brand, managed consistently across every platform.</h2>
+      <div class="decorative-divider" aria-hidden="true"></div>
+    </div>
+    <div class="reveal">
+      <p>This project covered Roofcraft&rsquo;s day-to-day digital presence &mdash; not just designing posts, but running the whole system behind them: monthly content planning, a weekly publishing schedule, on-brand photography and video, editing, copywriting and ongoing audience engagement. The goal was a presence that felt like one voice everywhere it showed up, and that turned attention into real enquiries.</p>
+      <div class="info">
+        <div><b>Role</b><span>Content strategy &amp; production</span></div>
+        <div><b>Platforms</b><span>TikTok, Facebook, Instagram</span></div>
+        <div><b>Focus</b><span>Trust, engagement, leads</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="full">
+  <div class="shell">
+    <p class="label reveal"><span>02</span> Platforms managed</p>
+    <h2 class="reveal" style="font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.065em;line-height:1.04;margin:.6rem 0 0;max-width:670px">Each platform earned a different job.</h2>
+    <div class="flat-grid reveal">
+      <div class="flat-row">
+        <h3>TikTok</h3>
+        <p class="platform-role">Reach &amp; personality</p>
+        <ul>
+          <li>Short-form installation videos</li>
+          <li>Behind-the-scenes on site</li>
+          <li>Team culture clips</li>
+          <li>Quick educational tips</li>
+        </ul>
+      </div>
+      <div class="flat-row">
+        <h3>Facebook</h3>
+        <p class="platform-role">Local trust</p>
+        <ul>
+          <li>Community updates</li>
+          <li>Completed project showcases</li>
+          <li>Seasonal promotions</li>
+          <li>Customer reviews</li>
+        </ul>
+      </div>
+      <div class="flat-row">
+        <h3>Instagram</h3>
+        <p class="platform-role">Visual proof</p>
+        <ul>
+          <li>Professional photography</li>
+          <li>Reels &amp; stories</li>
+          <li>Before &amp; after transformations</li>
+          <li>Highlight-worthy finishes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case">
+  <div class="shell">
+    <p class="label reveal"><span>03</span> Content strategy</p>
+    <h2 class="reveal" style="font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.065em;line-height:1.04;margin:.6rem 0 0;max-width:670px">Four jobs every post had to do.</h2>
+    <div class="flat-grid cols-4 reveal">
+      <div class="flat-row"><b>Brand awareness</b><p>Building trust through consistent educational and project-based content.</p></div>
+      <div class="flat-row"><b>Engagement</b><p>Encouraging conversations, shares and genuine customer interaction.</p></div>
+      <div class="flat-row"><b>Lead generation</b><p>Turning social visitors into real roofing enquiries.</p></div>
+      <div class="flat-row"><b>Visual identity</b><p>A consistent colour palette, typography and tone of voice throughout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="full">
+  <div class="shell">
+    <p class="label reveal"><span>04</span> Content gallery</p>
+    <h2 class="reveal" style="font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.065em;line-height:1.04;margin:.6rem 0 0;max-width:670px">A sample of what went out each week.</h2>
+    <div class="gallery">
+      <a class="project-visual gallery-item h-tall reveal" href="../assets/images/roofcraft-crew-at-work.jpg"><span class="image-slot"><b>Crew at work</b><small>On-site installation photography</small></span></a>
+      <a class="project-visual gallery-item h-mid reveal" href="../assets/images/roofcraft-before-after.png"><span class="image-slot"><b>Drone shot</b><small>Full roof overview, before works begin</small></span></a>
+      <a class="project-visual gallery-item h-short reveal" href="../assets/images/roofcraft-before-after.png"><span class="image-slot"><b>Before &amp; after</b><small>Side-by-side transformation post</small></span></a>
+      <a class="project-visual gallery-item h-mid reveal" href="../assets/images/roofcraft-facebook-update.png"><span class="image-slot"><b>Facebook update</b><small>Community project showcase</small></span></a>
+      <a class="project-visual gallery-item h-short reveal" href="../assets/images/roofcraft-tiktok-thumbnail.png"><span class="image-slot"><b>TikTok thumbnail</b><small>Short-form education clip</small></span></a>
+      <a class="project-visual gallery-item h-tall reveal" href="../assets/images/roofcraft-instagram-reel.png"><span class="image-slot"><b>Reel cover</b><small>Instagram before &amp; after reel</small></span></a>
+      <a class="project-visual gallery-item h-mid reveal" href="../assets/images/roofcraft-team-meeting.png"><span class="image-slot"><b>Team meeting</b><small>Planning the week&rsquo;s content</small></span></a>
+      <a class="project-visual gallery-item h-short reveal" href="../assets/images/roofcraft-customer-review.png"><span class="image-slot"><b>Customer review</b><small>Testimonial graphic for Facebook</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="case">
+  <div class="shell">
+    <p class="label reveal"><span>07</span> Workflow</p>
+    <h2 class="reveal" style="font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.065em;line-height:1.04;margin:.6rem 0 0;max-width:670px">The same eight steps, every single week.</h2>
+    <div class="workflow reveal">
+      <div class="step"><small>Step 01</small><b>Discovery</b></div>
+      <div class="step"><small>Step 02</small><b>Content planning</b></div>
+      <div class="step"><small>Step 03</small><b>Photography</b></div>
+      <div class="step"><small>Step 04</small><b>Video production</b></div>
+      <div class="step"><small>Step 05</small><b>Editing</b></div>
+      <div class="step"><small>Step 06</small><b>Scheduling</b></div>
+      <div class="step"><small>Step 07</small><b>Community management</b></div>
+      <div class="step"><small>Step 08</small><b>Analytics &amp; optimisation</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="full">
+  <div class="shell case-grid">
+    <div class="reveal">
+      <p class="label"><span>08</span> Branding</p>
+      <h2>An identity that held up everywhere it appeared.</h2>
+    </div>
+    <div class="reveal">
+      <p>Roofcraft&rsquo;s online identity was built to feel like one company, whether someone found it through a TikTok clip or a Facebook review. That meant the same colour palette and tone of voice on every post, professional imagery over stock photos, genuinely educational content, and a local, community-first focus that matched how the business actually works.</p>
+      <div class="tags">
+        <span>Consistent colour palette</span>
+        <span>Professional imagery</span>
+        <span>Educational content</span>
+        <span>Authentic team culture</span>
+        <span>Local community focus</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="shell reveal">
+    <h2>Need your brand to<br>stand out online?</h2>
+    <p>Let's create content that people remember.</p>
+    <a class="button" href="../index.html#contact">Let's work together</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <a class="brand" href="../index.html">amynell<span>.</span></a>
+    <p>(c) <span data-year></span> Amy Nell.</p>
+    <a href="../index.html#work">Back to projects</a>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+var y = document.querySelector('[data-year]');
+if (y) y.textContent = new Date().getFullYear();
+var reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach(function(el){ io.observe(el); });
+} else {
+  reveals.forEach(function(el){ el.classList.add('is-visible'); });
+}
+</script>
+</body></html>
