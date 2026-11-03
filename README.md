@@ -1,26 +1,16 @@
-﻿# Premium portfolio
+# Amy Nell — Portfolio
 
-A fast, framework-free, GitHub Pages-compatible personal portfolio homepage.
+Interactive portfolio published at https://amahlenell.github.io/portfolio/.
 
-## Publish it
+## Editing
 
-1. Replace the placeholder name **Amani N.**, email address, social links, and sample testimonials in `index.html`.
-2. Add your CV as `assets/downloads/CV.pdf` (the download button is already connected).
-3. Upload the contents of this folder to a GitHub repository and enable **Settings â†’ Pages â†’ Deploy from a branch**.
+- `index.html`: homepage, project cards, biography and contact details.
+- `app.js`: case-study content, technology stacks, galleries and interactions.
+- `style.css`: layout, mobile styles and reduced-motion support.
+- `assets/`: portrait, CV, project screenshots, original illustrations and the licensed font.
 
-The project contains no build step. Open `index.html` locally to preview it.
+This is a static website. GitHub Pages serves the repository root; no build or dependencies are required. All site asset paths are relative to support the `/portfolio/` address. `.nojekyll` keeps publishing buildless.
 
-## Customize safely
+The AI medical application is explicitly marked as planned and not yet built. Live project captures show the public sign-in screens. Illustrations are labelled; no project metrics or walkthrough videos have been fabricated.
 
-- Brand colors and global sizing: `assets/css/style.css` (the `:root` section)
-- Content, links and case studies: `index.html`
-- Navigation and reveal effects: `assets/js/app.js`
-
-The featured work and testimonial text are illustrative placeholders. Replace them with real, permissioned examples before presenting the site publicly.
-
-## Case studies
-
-Four linked project pages are in `projects/`. Each has a project overview, challenge, approach, technology tags, and clearly-marked illustrative outcomes. The visual placeholders are editable SVG files in `assets/images/`.
-
-
-
+Previous portfolio assets and project pages remain available for existing links. The design before this update is preserved in the backup branch and commit history.

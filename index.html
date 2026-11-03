@@ -1,420 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Amy Nell's personal portfolio: full stack web development, content creation and digital marketing.">
-    <meta name="author" content="Amy Nell">
-    <meta name="theme-color" content="#6246ea">
-
-    <title>Amy Nell | Full Stack Web Developer & Digital Marketer</title>
-
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/refinements.css">
-
-    <script src="assets/js/app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Amy Nell — full stack web developer and content creator. Explore the thinking, design, and code behind The Narrow Path and Our Table.">
+  <meta name="theme-color" content="#eeeee8">
+  <title>Amy Nell — Developer & Creator</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/amy-nell.jpg" as="image">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
-
 <body>
-
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <!-- ================= HEADER ================= -->
-
-    <header class="site-header" data-header>
-        <nav class="nav shell" aria-label="Main navigation">
-
-            <a class="brand" href="#top" aria-label="Amy Nell home">
-                amynell<span>.</span>
-            </a>
-
-            <button class="menu-button"
-                type="button"
-                aria-expanded="false"
-                aria-controls="nav-links"
-                data-menu-button>
-
-                <span></span>
-                <span></span>
-                <span class="sr-only">Open menu</span>
-            </button>
-
-            <div class="nav-links" id="nav-links" data-nav-links>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#work">Projects</a>
-                <a href="#contact" class="nav-contact">Contact me</a>
-            </div>
-
-        </nav>
-    </header>
-
-    <!-- ================= MAIN ================= -->
-
-    <main id="main">
-
-        <!-- Hero -->
-
-        <section class="hero section" id="top">
-
-            <div class="mouse-glow"></div>
-
-            <div class="shell hero-grid">
-
-                <div class="hero-copy reveal">
-
-                    <p class="eyebrow">
-                        <span class="status-dot"></span>
-                        Available for opportunities
-                    </p>
-
-                    <h1>Hi, I'm <em>Amy.</em></h1>
-
-                    <p class="hero-lede">
-                        I'm a Full Stack Web Developer and Content Creator.
-                        I enjoy helping businesses build a confident online
-                        presence through websites, content and social media.
-                    </p>
-
-                    <div class="button-row">
-                        <a class="button button-primary" href="#work">
-                            Explore my work
-                        </a>
-
-                        <a class="button button-quiet"
-                            href="AmyNell CV.pdf"
-                            download="Amy Nell CV.pdf">
-                            Download CV
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="hero-animation reveal" aria-label="Portfolio preview">
-                    <img
-                        src="portfolio pic.jpg"
-                        alt="Portfolio preview image"
-                        class="hero-image">
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Marquee -->
-
-        <section class="marquee" aria-label="Skills">
-
-            <div class="marquee-track">
-                <span>Full Stack Development</span>
-                <b>*</b>
-
-                <span>WordPress</span>
-                <b>*</b>
-
-                <span>Digital Marketing</span>
-                <b>*</b>
-
-                <span>Content Creation</span>
-                <b>*</b>
-
-                <span>Video Editing</span>
-                <b>*</b>
-
-                <span>Full Stack Development</span>
-                <b>*</b>
-            </div>
-
-        </section>
-
-        <!-- About -->
-
-        <section class="section" id="about">
-
-            <div class="shell about-grid">
-
-                <div class="about-content">
-
-                    <h2 class="display reveal">ABOUT ME.</h2>
-
-                    <div class="decorative-divider" aria-hidden="true"></div>
-
-                    <div>
-
-                        <p>
-                            I love turning ideas into modern digital experiences. From responsive websites to engaging content, I focus on creating work that's clean, user-friendly, and built with purpose.
-
-                        </p>
-
-                        <p>
-                            My experience spans frontend and backend development, along with content creation and digital marketing, allowing me to approach every project with both creativity and strategy. I'm always learning, experimenting, and looking for new ways to help businesses stand out online. 
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-                <div class="about-visual reveal" aria-hidden="true">
-                    <div class="about-orb"></div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Skills -->
-
-        <section class="section services-section" id="skills">
-
-            <div class="shell">
-
-                <div class="section-heading reveal">
-
-                    <div class="section-label">
-                        <span>02</span>
-                        Skills and strengths
-                    </div>
-
-                    <h2 class="display">
-                        My digital skill set.
-                    </h2>
-
-                </div>
-
-                <div class="services-grid">
-
-                    <article class="service-card service-featured reveal">
-
-                        <div>
-                            <span class="service-number">01</span>
-                            <span class="service-symbol"></span>
-                        </div>
-
-                        <h3>Full Stack Web Development</h3>
-
-                        <p>
-                            I design and build responsive sites that are clear,
-                            accessible and ready to grow.
-                        </p>
-
-                        <ul>
-                            <li>WordPress and custom builds</li>
-                            <li>HTML, CSS, JavaScript and Python</li>
-                            <li>SEO and performance foundations</li>
-                        </ul>
-
-                    </article>
-
-                    <article class="service-card reveal">
-
-                        <span class="service-number">02</span>
-
-                        <h3>Digital Marketing</h3>
-
-                        <p>
-                            Campaign thinking, social strategy and reporting
-                            that turn attention into meaningful action.
-                        </p>
-
-                    </article>
-
-                    <article class="service-card reveal">
-
-                        <span class="service-number">03</span>
-
-                        <h3>Content Creation</h3>
-
-                        <p>
-                            On-brand visuals, copy and short-form video with
-                            a strong point of view.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Projects -->
-
-        <section class="section work-section" id="work">
-
-            <div class="shell">
-
-                <div class="section-heading split reveal">
-
-                    <div>
-
-                        <div class="section-label">
-                            <span>03</span>
-                            Projects
-                        </div>
-
-                        <h2 class="display">
-                            My Projects.
-                        </h2>
-
-                <div class="projects-grid">
-
-                    <!-- Project 1 -->
-
-                    <article class="project-card project-large reveal">
-
-                        <a class="project-visual"
-                            href="projects/wordpress-business-website.html">
-
-                            <img
-                                src="assets/images/RoofCraft-Logo.png"
-                                alt="Roofcraft project preview showing the website concept">
-
-                        </a>
-
-                        <div class="project-meta">
-
-                            <div>
-                                <p>Website design</p>
-                                <h3>Roofcraft</h3>
-                            </div>
-
-                            <a
-                                href="https://roofcraft-nz.vercel.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="View Roofcraft project">
-                                >
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                    <!-- Project 2 -->
-
-                    <article class="project-card project-card--tall reveal">
-
-                        <a class="project-visual"
-                            href="projects/social-media-showcase.html">
-
-                            <img
-                                src="assets/images/RoofCraft-fb-ph-lap.png"
-                                alt="Roofcraft social media campaign mockups">
-
-                        </a>
-
-                        <div class="project-meta">
-
-                            <div>
-                                <p>Social media strategy</p>
-                                <h3>Roofcraft Social</h3>
-                            </div>
-
-                            <a
-                                href="projects/social-media-showcase.html"
-                                aria-label="View Roofcraft social project">
-                                >
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                    <!-- Project 3 -->
-
-                    <article class="project-card project-card--tall reveal">
-
-                        <a class="project-visual"
-                            href="projects/video-editing-portfolio.html">
-
-                            <img
-                                src="assets/images/roofcraft-capcut-phone.png"
-                                alt="Roofcraft video editing showcase">
-
-                        </a>
-
-                        <div class="project-meta">
-
-                            <div>
-                                <p>Video editing</p>
-                                <h3>Roofcraft Video</h3>
-                            </div>
-
-                            <a
-                                href="projects/video-editing-portfolio.html"
-                                aria-label="View Roofcraft video project">
-                                >
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Contact -->
-
-        <section class="contact-section section" id="contact">
-
-            <div class="contact-orb"></div>
-
-            <div class="shell contact-inner reveal">
-
-                <p class="eyebrow light">
-                    <span class="status-dot"></span>
-                    Available for work
-                </p>
-
-                <h2>
-                    Let's make<br>
-                    something useful.
-                </h2>
-
-                <p>
-                    I'm open to full stack development, digital marketing,
-                    content and AI-focused opportunities.
-                </p>
-
-                <a class="button button-white"
-                    href="mailto:amynell711@gmail.com">
-                    amynell711@gmail.com
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="shell">
-
-            <a class="brand" href="#top">
-                amynell<span>.</span>
-            </a>
-
-            <p>
-                &copy; <span data-year></span> Amy Nell.
-            </p>
-
-            <a href="#top">
-                Back to top
-            </a>
-
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="header shell">
+    <a class="wordmark" href="#home" aria-label="Amy Nell home">an<span>✳</span></a>
+    <span class="header-role">Full stack developer<br>& digital creator</span>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work <sup>03</sup></a>
+      <a href="#about">About</a>
+      <a href="#contact">Let’s talk <span>↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero shell" id="home" aria-labelledby="hero-title">
+      <div class="name-top"><span>IDEAS. CODE. A LITTLE CURIOSITY.</span><span>PORTFOLIO — 2026</span></div>
+      <h1 id="hero-title">AMY NELL<span class="name-dot">.</span></h1>
+      <div class="hero-bottom">
+        <div class="hero-intro">
+          <p>I turn thoughtful ideas<br>into things people<br><em>love to use.</em></p>
+          <a class="text-link" href="#work">Explore my work <span>↘</span></a>
         </div>
+        <figure class="portrait">
+          <div class="portrait-frame"><img src="assets/amy-nell.jpg" alt="Amy Nell, full stack developer and content creator" width="800" height="800" fetchpriority="high"></div>
+          <figcaption><span>THE PERSON BEHIND THE PIXELS</span><span>01 / AMY</span></figcaption>
+        </figure>
+        <div class="hero-side"><span class="asterisk" aria-hidden="true">✳</span><p>Developer’s mind.<br>Creator’s eye.<br>Human at heart.</p><span class="availability"><i></i> Open to opportunities</span></div>
+      </div>
+      <div class="hero-foot"><span>WEB DEVELOPMENT &nbsp; / &nbsp; DESIGN &nbsp; / &nbsp; AI</span><a href="#work">SCROLL TO DISCOVER <span>↓</span></a></div>
+    </section>
 
-    </footer>
+    <section class="work shell" id="work" aria-labelledby="work-title">
+      <div class="section-top"><span>(01 — SELECTED WORK)</span><span>A FEW THINGS I’VE BEEN MAKING</span></div>
+      <div class="section-heading"><h2 id="work-title">Small ideas.<br><span>Thoughtful builds.</span></h2><p>From shared daily rituals to everyday meals.<br>Explore the problem, the process,<br>and what went into each build.</p></div>
 
+      <article class="project narrow" id="narrow-path">
+        <button class="project-visual" data-project="narrow" aria-label="Read The Narrow Path case study">
+          <div class="narrow-cover">
+            <div class="cover-title"><span>A SHARED JOURNEY</span><h3>The<br>Narrow Path<span>↗</span></h3><p>One day at a time.<br>Side by side.</p></div>
+            <div class="phone"><div class="phone-speaker"></div><img src="assets/narrow-path-live.png" alt="The Narrow Path’s live sign-in screen" loading="lazy"></div>
+            <svg class="landscape" viewBox="0 0 1200 660" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="920" cy="140" r="70" fill="#e4ca8f"/><path d="M300 660L760 140 1100 660Z" fill="#61765e"/><path d="M500 660L950 220 1290 660Z" fill="#3f5948"/><path d="M0 660V520Q280 290 640 550T1200 420V660Z" fill="#b7b7a0"/><path d="M0 660V620Q300 440 630 610T1200 540V660Z" fill="#8c9c81"/><path d="M760 660C650 590 400 640 490 560S800 550 680 460S720 310 760 260" stroke="#ebd6ad" stroke-width="20" fill="none"/></svg>
+            <span class="preview-label">PROJECT ARTWORK + LIVE SCREEN</span>
+          </div><span class="project-open" aria-hidden="true">View case study ↗</span>
+        </button>
+        <div class="project-info"><div class="project-number">01 /</div><div class="project-description"><h3>The Narrow Path</h3><p>A private space to grow in faith, together.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Motion</span></div></div><button class="round-link" data-project="narrow" aria-label="Open The Narrow Path case study">↗</button></div>
+      </article>
+
+      <article class="project table" id="our-table">
+        <button class="project-visual" data-project="table" aria-label="Read Our Table case study">
+          <div class="table-cover"><div class="table-cover-top"><span>GOOD FOOD. SHARED.</span><span class="table-brand">Our Table<span>✳</span></span><span>YOUR EVERYDAY KITCHEN</span></div><div class="browser-mockup"><div class="browser-bar"><span>● ● ●</span><span>our-table-wine.vercel.app</span><span>↗</span></div><img src="assets/our-table-live.png" alt="Our Table’s live welcome and sign-in page" loading="lazy"></div><div class="table-cover-bottom"><span>A little planning.<br>More time together.</span><span class="fork" aria-hidden="true">✳</span><span>RECIPES / NUTRITION / MEAL PREP</span></div></div>
+          <span class="project-open" aria-hidden="true">View case study ↗</span>
+        </button>
+        <div class="project-info"><div class="project-number">02 /</div><div class="project-description"><h3>Our Table</h3><p>A thoughtful recipe book for an everyday kitchen.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>OpenAI API</span></div></div><button class="round-link" data-project="table" aria-label="Open Our Table case study">↗</button></div>
+      </article>
+
+      <article class="project medical" id="up-next">
+        <button class="project-visual" data-project="medical" aria-label="Read about the planned AI medical application">
+          <div class="medical-cover"><div class="medical-grid" aria-hidden="true"></div><span class="medical-label"><i></i> EXPLORING WHAT’S NEXT</span><h3>A little intelligence.<br><em>A lot of care.</em></h3><svg class="medical-flower" viewBox="0 0 300 300" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><ellipse cx="150" cy="150" rx="135" ry="55"/><ellipse cx="150" cy="150" rx="135" ry="55" transform="rotate(45 150 150)"/><ellipse cx="150" cy="150" rx="135" ry="55" transform="rotate(90 150 150)"/><ellipse cx="150" cy="150" rx="135" ry="55" transform="rotate(135 150 150)"/><circle cx="150" cy="150" r="55"/></g><path d="M132 125H168V132H175V168H168V175H132V168H125V132H132Z" fill="currentColor"/></svg><div class="medical-bottom"><span>AI × HEALTHCARE</span><span>COMING NEXT ↗</span></div></div>
+          <span class="project-open" aria-hidden="true">Read the plan ↗</span>
+        </button>
+        <div class="project-info"><div class="project-number">03 /</div><div class="project-description"><h3>AI medical application <span class="soon-tag">Coming next</span></h3><p>A new space to explore. Not built yet.</p><div class="tags"><span>Discovery</span><span>Stack to be decided</span></div></div><button class="round-link" data-project="medical" aria-label="Open AI medical application project plan">↗</button></div>
+      </article>
+    </section>
+
+    <section class="about shell" id="about" aria-labelledby="about-title">
+      <div class="section-top"><span>(02 — A LITTLE ABOUT ME)</span><span>MORE THAN JUST THE CODE</span></div>
+      <div class="about-grid"><div class="about-left"><span class="asterisk" aria-hidden="true">✳</span><h2 id="about-title">Curious by nature.<br>Creative by default.</h2><a class="text-link" href="assets/amy-nell-cv.pdf" target="_blank" rel="noopener">Read my CV <span>↗</span></a></div><div class="about-copy"><p class="big-copy">Hi, I’m Amy. I’m a full stack web developer and content creator who loves making digital things feel a little more human.</p><p>My experience spans frontend and backend development, content creation, and digital marketing. I bring both a creative eye and a practical approach to the things I build.</p><p>I’m always learning, experimenting, and finding thoughtful ways to turn an idea into something useful.</p><div class="expertise"><div><span>01</span><h3>Build</h3><p>Responsive interfaces.<br>Connected applications.</p></div><div><span>02</span><h3>Create</h3><p>Visual storytelling.<br>Content with purpose.</p></div><div><span>03</span><h3>Explore</h3><p>New tools.<br>AI possibilities.</p></div></div></div></div>
+    </section>
+    <div class="marquee" aria-hidden="true"><div>THINK IT. BUILD IT. MAKE IT FEEL GOOD. <span>✳</span> THINK IT. BUILD IT. MAKE IT FEEL GOOD. <span>✳</span> </div></div>
+    <section class="contact shell" id="contact" aria-labelledby="contact-title"><div class="section-top"><span>(03 — SAY HELLO)</span><span class="availability"><i></i> OPEN TO OPPORTUNITIES</span></div><p>Have something in mind?</p><a class="contact-title" href="mailto:amynell711@gmail.com"><h2 id="contact-title">Let’s make<br><em>something matter.</em></h2><span>↗</span></a><div class="contact-links"><a href="mailto:amynell711@gmail.com">amynell711@gmail.com ↗</a><a href="https://github.com/amahlenell" target="_blank" rel="noopener">GitHub ↗</a><button id="copy-email" type="button">Copy email <span>⧉</span></button></div><p class="copy-status" id="copy-status" role="status"></p></section>
+  </main>
+  <footer class="shell"><span>© <span id="year">2026</span> AMY NELL</span><span>MADE WITH CURIOSITY & A LITTLE CODE.</span><a href="#home">BACK TO TOP ↑</a></footer>
+
+  <dialog id="case-dialog" aria-labelledby="case-title"><div class="case-shell"><header class="case-header"><a class="wordmark" href="#home" data-close>an<span>✳</span></a><span id="case-counter"></span><button class="close-case" type="button">Back to work <span>×</span></button></header><div id="case-content"></div><footer class="case-footer"><span>MORE TO EXPLORE</span><button id="next-project" type="button"></button></footer></div></dialog>
+  <div class="hover-cursor" aria-hidden="true">EXPLORE<br>↗</div>
 </body>
-
 </html>
+
