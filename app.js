@@ -3,11 +3,12 @@ const projects = {
   narrow: {
     index: '01', title: 'The Narrow Path', category: 'A SHARED JOURNEY · FULL STACK WEB APP',
     subtitle: 'A private space for two people to build a daily rhythm of faith, encouragement, and shared progress.',
-    url: 'https://narrow-path-blond.vercel.app/', repo: 'https://github.com/amahlenell/narrow-path',
+    demoUrl: 'https://narrow-path-recruiter-demo.vercel.app/demo', url: 'https://narrow-path-blond.vercel.app/', repo: 'https://github.com/amahlenell/narrow-path',
     role: 'Full-stack developer · Personal project', architecture: [['Frontend', 'Next.js · React · Tailwind · Motion'], ['Application logic', 'Server actions · check-in rules · Auckland dates'], ['Data & identity', 'Supabase Auth · PostgreSQL · RLS · Realtime']],
-    type: 'Personal project / PWA', status: 'Live · sign-in required',
+    type: 'Personal project / PWA', status: 'Live app + isolated sample demo',
     stack: ['Next.js 15', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Motion'],
     images: [
+      {src:'assets/narrow-path-demo-mobile.png', alt:'The Narrow Path sample demo with fictional Alex and Jordan', caption:'Narrow Path · working sample demo · mobile', portrait:true},
       {src:'assets/narrow-path-mobile.png', alt:'The Narrow Path public mobile sign-in interface', caption:'Actual public interface · responsive capture of the unauthenticated sign-in markup', portrait:true},
       {src:'assets/narrow-path-live.png', alt:'Public sign-in screen of The Narrow Path', caption:'Public interface · desktop sign-in screen'},
       {src:'assets/narrow-path-lifestyle.jpg', alt:'Licensed stock photograph of a couple sharing a phone at a table', caption:'Lifestyle photograph · Gustavo Fring / Pexels · stock models, not users or endorsers'}
@@ -31,11 +32,13 @@ const projects = {
   table: {
     index: '02', title: 'Our Table', category: 'YOUR EVERYDAY KITCHEN · FULL STACK WEB APP',
     subtitle: 'A shared recipe book that connects the food you love with practical meal preparation for two.',
-    url: 'https://our-table-wine.vercel.app/auth/login', repo: 'https://github.com/amahlenell/our-table',
+    demoUrl: 'https://our-table-recruiter-demo.vercel.app/', url: 'https://our-table-wine.vercel.app/auth/login', repo: 'https://github.com/amahlenell/our-table',
     role: 'Full-stack developer · Personal project', architecture: [['Frontend', 'Next.js · React · responsive cookbook UI'], ['Server & domain', 'Validated APIs · nutrition & planning modules'], ['Data & services', 'Supabase · OpenAI API · USDA food data']],
-    type: 'Personal project / Web application', status: 'Live · sign-in required',
+    type: 'Personal project / Web application', status: 'Live app + isolated sample demo',
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'OpenAI API', 'USDA FoodData Central', 'Zod'],
     images: [
+      {src:'assets/our-table-demo-desktop.png', alt:'Our Table sample kitchen with fictional recipes and people', caption:'Our Table · working sample kitchen · desktop'},
+      {src:'assets/our-table-demo-mobile.png', alt:'Our Table sample kitchen on mobile', caption:'Our Table · working sample kitchen · mobile', portrait:true},
       {src:'assets/our-table-live.png', alt:'Our Table’s live public welcome and sign-in page', caption:'Live capture · welcome to the everyday kitchen'},
       {src:'assets/our-table-mobile.png', alt:'Our Table public mobile welcome and sign-in interface', caption:'Actual public interface · mobile welcome and sign-in', portrait:true},
       {src:'assets/our-table-flow.svg', alt:'Recipe to ingredients to portions to meal plan product flow', caption:'Product flow · from a favourite recipe to a shared plan'}
@@ -85,7 +88,7 @@ const escapeHTML = value => String(value).replace(/[&<>"']/g, char => ({'&':'&am
 const renderStory = blocks => blocks.map(([label,title,body]) => `<section class="story-block"><span>${escapeHTML(label)}</span><h2>${escapeHTML(title)}</h2><p>${escapeHTML(body)}</p></section>`).join('');
 
 function renderArchitecture(nodes) {
-  return '<div class="architecture-flow" aria-label="Application architecture">'+nodes.map(([title,detail],index)=>`${index?icon('arrow-right'):''}<div class="architecture-node"><strong>${escapeHTML(title)}</strong><span>${escapeHTML(detail)}</span></div>`).join('')+'</div><p class="architecture-caption">Architecture summary from the project source. This diagram is not a screenshot.</p>';
+  return '<div class="architecture-flow" aria-label="Application architecture">'+nodes.map(([title,detail],index)=>`${index?icon('arrow-right'):''}<div class="architecture-node"><strong>${escapeHTML(title)}</strong><span>${escapeHTML(detail)}</span></div>`).join('')+'</div><p class="architecture-caption">Frontend, application logic, and connected services.</p>';
 }
 
 function renderCase(key) {
@@ -93,9 +96,9 @@ function renderCase(key) {
   activeProject = key;
   imageIndex = 0;
   document.querySelector('#case-counter').textContent = `SELECTED WORK / ${p.index}`;
-  content.innerHTML = `<div class="case-title-row"><div><p class="case-eyebrow">${p.category}</p><h1 id="case-title">${p.title}</h1><p class="case-subtitle">${p.subtitle}</p></div>${p.url ? `<div class="case-links"><a class="case-external" href="${p.url}" target="_blank" rel="noopener">Explore live app ${icon('arrow-up-right')}</a><p class="case-access">Sign-in required. A public sample demo is not yet available.</p></div>` : '<span class="soon-tag">Coming next</span>'}</div>
+  content.innerHTML = `<div class="case-title-row"><div><p class="case-eyebrow">${p.category}</p><h1 id="case-title">${p.title}</h1><p class="case-subtitle">${p.subtitle}</p></div>${p.url ? `<div class="case-links"><div class="case-primary-links"><a class="case-external case-demo" href="${p.demoUrl}" target="_blank" rel="noopener">Try Live Demo ${icon('arrow-up-right')}</a></div><a class="case-production" href="${p.url}" target="_blank" rel="noopener">Open production app ${icon('arrow-up-right')}</a></div>` : '<span class="soon-tag">Coming next</span>'}</div>
     <figure class="gallery"><div class="gallery-stage"><img id="gallery-image" src="${p.images[0].src}" alt="${p.images[0].alt}" class="${p.images[0].portrait ? 'portrait-media' : ''}"><button class="gallery-expand" type="button" aria-expanded="false">Expand preview ${icon('expand')}</button></div><figcaption class="gallery-controls"><span class="gallery-caption" id="gallery-caption" aria-live="polite">${p.images[0].caption}</span>${p.images.length > 1 ? `<button class="gallery-prev" aria-label="Previous image" type="button">${icon('arrow-left')}</button><span class="gallery-index" aria-hidden="true"></span><button class="gallery-next" aria-label="Next image" type="button">${icon('arrow-right')}</button>` : ''}</figcaption></figure>
-    <div class="case-body"><aside class="case-meta" aria-label="Project details"><div><h3>MY ROLE</h3><p class="case-role">${p.role}</p></div><div><h3>PROJECT TYPE</h3><p>${p.type}</p></div><div><h3>STATUS</h3><p>${p.status}</p></div><div><h3>TECHNOLOGY STACK</h3><div class="tags">${p.stack.map(s => `<span>${s}</span>`).join('')}</div></div>${p.repo ? `<div><h3>EXPLORE THE CODE</h3><a href="${p.repo}" target="_blank" rel="noopener">View repository ${icon('arrow-up-right')}</a></div>`:''}</aside><div class="case-story"><div class="case-tabs" role="tablist" aria-label="Case study sections"><button type="button" id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" data-tab="overview">Overview</button><button type="button" id="tab-build" role="tab" aria-selected="false" aria-controls="panel-build" tabindex="-1" data-tab="build">The build</button><button type="button" id="tab-notes" role="tab" aria-selected="false" aria-controls="panel-notes" tabindex="-1" data-tab="notes">Reflections</button></div>${['overview','build','notes'].map((tab,i) => `<div role="tabpanel" id="panel-${tab}" aria-labelledby="tab-${tab}" tabindex="0" ${i?'hidden':''}>${tab==='build'&&p.architecture?renderArchitecture(p.architecture):''}${renderStory(p[tab])}${tab==='overview'&&p.repo?`<p class="story-note">Project details are based on the public application and repository documentation. Screens show public interfaces. Lifestyle images use licensed stock models and do not imply endorsement.</p>`:''}</div>`).join('')}</div></div>`;
+    <div class="case-body"><aside class="case-meta" aria-label="Project details"><div><h3>MY ROLE</h3><p class="case-role">${p.role}</p></div><div><h3>PROJECT TYPE</h3><p>${p.type}</p></div><div><h3>STATUS</h3><p>${p.status}</p></div><div><h3>TECHNOLOGY STACK</h3><div class="tags">${p.stack.map(s => `<span>${s}</span>`).join('')}</div></div>${p.repo ? `<div><h3>EXPLORE THE CODE</h3><a href="${p.repo}" target="_blank" rel="noopener">View repository ${icon('arrow-up-right')}</a></div>`:''}</aside><div class="case-story"><div class="case-tabs" role="tablist" aria-label="Case study sections"><button type="button" id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" data-tab="overview">Overview</button><button type="button" id="tab-build" role="tab" aria-selected="false" aria-controls="panel-build" tabindex="-1" data-tab="build">The build</button><button type="button" id="tab-notes" role="tab" aria-selected="false" aria-controls="panel-notes" tabindex="-1" data-tab="notes">Reflections</button></div>${['overview','build','notes'].map((tab,i) => `<div role="tabpanel" id="panel-${tab}" aria-labelledby="tab-${tab}" tabindex="0" ${i?'hidden':''}>${tab==='build'&&p.architecture?renderArchitecture(p.architecture):''}${renderStory(p[tab])}</div>`).join('')}</div></div>`;
   updateGallery();
   content.querySelectorAll('[data-tab]').forEach(button => {
     button.addEventListener('click', () => activateTab(button.dataset.tab));
