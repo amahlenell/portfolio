@@ -62,26 +62,8 @@ const projects = {
       ['DESIGN DECISION', 'Make the everyday actions feel easy.', 'The application’s cookbook identity uses an earthy palette and Fredoka/Nunito typography. Mobile navigation, focused cooking steps, and a print layout support using the product in a kitchen, rather than only presenting it in a browser.'],
       ['NEXT STEPS', 'Verify the connected experience.', 'The repository records the distinction between local demo behaviour and service-backed features. Live multi-account isolation, provider calls, and concurrent editing need their own verification. The portfolio does not present those checks as completed.']
     ]
-  },
-  medical: {
-    index: '03', title: 'AI medical application', category: 'COMING NEXT · PROJECT DIRECTION',
-    subtitle: 'An upcoming project exploring the intersection of AI and healthcare. The idea is still taking shape.',
-    role: 'Planned personal project',
-    type: 'Planned project', status: 'Not built yet', stack: ['To be decided after discovery'],
-    images: [{src:'assets/medical-artwork.svg', alt:'Abstract violet orbital artwork for an upcoming AI healthcare project', caption:'Concept artwork · no application has been built yet'}],
-    overview: [
-      ['THE STARTING POINT', 'Begin with a real problem.', 'This space is reserved for an AI medical application. The first step is to choose a specific problem and audience before settling on a feature set, technical stack, or product name.'],
-      ['THE PLAN', 'Discover. Prototype. Evaluate.', 'Define the intended use, map a small user journey, and build a focused prototype. The eventual case study will document the decisions, interface, implementation, and limitations with actual evidence.'],
-      ['THE STATUS', 'Something to look forward to.', 'There is no live application, completed build, or technology stack to showcase yet. This project slot will become a full visual case study when the work exists.']
-    ],
-    build: [
-      ['PLANNED', 'Let the problem choose the stack.', 'The application framework, AI model, and data requirements will be chosen after the project’s purpose and constraints are defined. No technologies are presented here as implemented.'],
-      ['FUTURE CASE STUDY', 'Show the work as it develops.', 'This case study is ready for interface captures, a walkthrough video, technical decisions, and an evaluation of what the prototype can and cannot do.']
-    ],
-    notes: [
-      ['OPEN QUESTIONS', 'A useful starting point.', 'Who is the application for? What task should it help with? What would a successful prototype demonstrate? Those questions come before the final design and implementation.']
-    ]
   }
+
 };
 
 const dialog = document.querySelector('#case-dialog');
@@ -170,7 +152,7 @@ document.querySelectorAll('[data-project]').forEach(button => button.addEventLis
 document.querySelector('.close-case').addEventListener('click',()=>closeCase());
 document.querySelector('[data-close]').addEventListener('click',event=>{event.preventDefault();closeCase();});
 dialog.addEventListener('cancel',event=>{event.preventDefault();closeCase();});
-function syncHash(){const match=location.hash.match(/^#case-study\/(narrow|table|medical)$/);if(match)openCase(match[1],null,false);else if(dialog.open)closeCase(false);}
+function syncHash(){const match=location.hash.match(/^#case-study\/(narrow|table)$/);if(match)openCase(match[1],null,false);else if(dialog.open)closeCase(false);}
 window.addEventListener('popstate',syncHash);window.addEventListener('hashchange',syncHash);syncHash();
 
 document.querySelector('#copy-email').addEventListener('click', async event => {
