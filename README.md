@@ -4,11 +4,12 @@ Interactive portfolio published at https://amahlenell.github.io/portfolio/.
 
 ## Editing
 
-- `index.html`: engineering-focused introduction, skills, product showcases, development approach and recruitment contact details.
+- `index.html`: engineering-focused introduction, two completed product showcases, skills, development approach and recruitment contact details.
 - `app.js`: case-study content, technology stacks, galleries and interactions.
 - `style.css`: layout, mobile styles and reduced-motion support.
 - `refinements.css`: layered panels, recruitment layout, realistic device frames, responsive overrides and consistent SVG styling.
 - `interactions.css` and `interactions.js`: centered Portfolio hero, five-card stack carousel, flips, keyboard controls, pointer dragging, portrait toggle, touch cover movement and gallery swipes.
+- `portfolio-update.css`: compact hero, project highlights, visible skills summary, optional stack details, responsive layouts and normal section scrolling.
 - `assets/icons.svg`: shared SVG symbols; no emoji-based stars or arrows.
 - `assets/`: portrait, CV, project screenshots, original illustrations and the licensed font.
 
@@ -18,7 +19,11 @@ The AI medical application is explicitly marked as planned and not yet built. Th
 
 ## Scrolling and accessibility
 
-Desktop panels pin after their final content is reached, calculated from their measured height. Later panels overlap earlier ones. Navigation computes normal-flow positions so sticky offsets do not break anchor links. Tablet and phone layouts use normal scrolling with rounded section boundaries. Reduced-motion preferences disable pinning, status pulsing and transitions. The native case-study dialog retains focus management, Escape, keyboard story tabs, gallery controls and direct-link support.
+All layouts use normal document scrolling with rounded section boundaries, keeping expanded skills and project actions accessible. The skills summary is always visible; the native details disclosure reveals the existing carousel. Reduced-motion preferences disable status pulsing and transitions. The native case-study dialog retains focus management, Escape, keyboard story tabs, gallery controls and direct-link support.
+
+## Engineering evidence
+
+Completed projects lead the page. Each card highlights a concrete engineering decision and distinguishes demo access from live verification. Case studies link directly to test files and document remaining checks. Repository-reported results are attributed; adding an evidence link does not claim a new test run. The planned healthcare project appears separately under Currently exploring.
 
 ## Assets and credit
 

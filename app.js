@@ -5,6 +5,8 @@ const projects = {
     subtitle: 'A private space for two people to build a daily rhythm of faith, encouragement, and shared progress.',
     demoUrl: 'https://narrow-path-recruiter-demo.vercel.app/demo', url: 'https://narrow-path-blond.vercel.app/', repo: 'https://github.com/amahlenell/narrow-path',
     role: 'Full-stack developer · Personal project', architecture: [['Frontend', 'Next.js · React · Tailwind · Motion'], ['Application logic', 'Server actions · check-in rules · Auckland dates'], ['Data & identity', 'Supabase Auth · PostgreSQL · RLS · Realtime']],
+    verification: 'The repository reports 35 pure-logic tests and database tests passing. Type checking, production build checks, signed-in browser flows, and real-device notification delivery are not independently verified here.',
+    evidence: [['Date boundary tests', 'https://github.com/amahlenell/narrow-path/blob/main/src/lib/dates.test.ts'], ['Streak tests', 'https://github.com/amahlenell/narrow-path/blob/main/src/lib/streak.test.ts'], ['Database rules tests', 'https://github.com/amahlenell/narrow-path/blob/main/supabase/tests/10_rules.sql']],
     type: 'Personal project / PWA', status: 'Live app + isolated sample demo',
     stack: ['Next.js 15', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Motion'],
     images: [
@@ -34,6 +36,8 @@ const projects = {
     subtitle: 'A shared recipe book that connects the food you love with practical meal preparation for two.',
     demoUrl: 'https://our-table-recruiter-demo.vercel.app/', url: 'https://our-table-wine.vercel.app/auth/login', repo: 'https://github.com/amahlenell/our-table',
     role: 'Full-stack developer · Personal project', architecture: [['Frontend', 'Next.js · React · responsive cookbook UI'], ['Server & domain', 'Validated APIs · nutrition & planning modules'], ['Data & services', 'Supabase · OpenAI API · USDA food data']],
+    verification: 'The repository includes unit, integration, and browser tests for nutrition, planning, and recipe journeys. These test files are linked below; they are not a claim of a fresh passing run. Live household isolation, authentication, storage access, concurrent edits, and real provider calls remain staging checks.',
+    evidence: [['Nutrition tests', 'https://github.com/amahlenell/our-table/blob/main/tests/unit/nutrition.test.ts'], ['Recipe browser journey', 'https://github.com/amahlenell/our-table/blob/main/tests/e2e/recipe-management.spec.ts'], ['Testing scope & limitations', 'https://github.com/amahlenell/our-table/blob/main/docs/TESTING.md']],
     type: 'Personal project / Web application', status: 'Live app + isolated sample demo',
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'OpenAI API', 'USDA FoodData Central', 'Zod'],
     images: [
@@ -83,7 +87,7 @@ const projects = {
 const dialog = document.querySelector('#case-dialog');
 const content = document.querySelector('#case-content');
 let activeProject, imageIndex = 0, opener;
-const keys = Object.keys(projects);
+const keys = ['narrow', 'table'];
 const escapeHTML = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const renderStory = blocks => blocks.map(([label,title,body]) => `<section class="story-block"><span>${escapeHTML(label)}</span><h2>${escapeHTML(title)}</h2><p>${escapeHTML(body)}</p></section>`).join('');
 
@@ -91,14 +95,19 @@ function renderArchitecture(nodes) {
   return '<div class="architecture-flow" aria-label="Application architecture">'+nodes.map(([title,detail],index)=>`${index?icon('arrow-right'):''}<div class="architecture-node"><strong>${escapeHTML(title)}</strong><span>${escapeHTML(detail)}</span></div>`).join('')+'</div><p class="architecture-caption">Frontend, application logic, and connected services.</p>';
 }
 
+function renderVerification(p) {
+  if (!p.verification) return '';
+  return `<section class="verification-panel" aria-label="Verification and evidence"><span>VERIFICATION & EVIDENCE</span><h2>What is checked. What remains.</h2><p>${escapeHTML(p.verification)}</p><div class="verification-links">${p.evidence.map(([label,url]) => `<a href="${escapeHTML(url)}" target="_blank" rel="noopener">${escapeHTML(label)} ${icon('arrow-up-right')}</a>`).join('')}</div></section>`;
+}
+
 function renderCase(key) {
   const p = projects[key];
   activeProject = key;
   imageIndex = 0;
   document.querySelector('#case-counter').textContent = `SELECTED WORK / ${p.index}`;
-  content.innerHTML = `<div class="case-title-row"><div><p class="case-eyebrow">${p.category}</p><h1 id="case-title">${p.title}</h1><p class="case-subtitle">${p.subtitle}</p></div>${p.url ? `<div class="case-links"><div class="case-primary-links"><a class="case-external case-demo" href="${p.demoUrl}" target="_blank" rel="noopener">Try Live Demo ${icon('arrow-up-right')}</a></div><a class="case-production" href="${p.url}" target="_blank" rel="noopener">Open production app ${icon('arrow-up-right')}</a></div>` : '<span class="soon-tag">Coming next</span>'}</div>
+  content.innerHTML = `<div class="case-title-row"><div><p class="case-eyebrow">${p.category}</p><h1 id="case-title">${p.title}</h1><p class="case-subtitle">${p.subtitle}</p></div>${p.url ? `<div class="case-links"><div class="case-primary-links"><a class="case-external case-demo" href="${p.demoUrl}" target="_blank" rel="noopener">Try demo ${icon('arrow-up-right')}</a></div><a class="case-production" href="${p.url}" target="_blank" rel="noopener">Open production app (sign-in required) ${icon('arrow-up-right')}</a></div>` : '<span class="soon-tag">Coming next</span>'}</div>
     <figure class="gallery"><div class="gallery-stage"><img id="gallery-image" src="${p.images[0].src}" alt="${p.images[0].alt}" class="${p.images[0].portrait ? 'portrait-media' : ''}"><button class="gallery-expand" type="button" aria-expanded="false">Expand preview ${icon('expand')}</button></div><figcaption class="gallery-controls"><span class="gallery-caption" id="gallery-caption" aria-live="polite">${p.images[0].caption}</span>${p.images.length > 1 ? `<button class="gallery-prev" aria-label="Previous image" type="button">${icon('arrow-left')}</button><span class="gallery-index" aria-hidden="true"></span><button class="gallery-next" aria-label="Next image" type="button">${icon('arrow-right')}</button>` : ''}</figcaption></figure>
-    <div class="case-body"><aside class="case-meta" aria-label="Project details"><div><h3>MY ROLE</h3><p class="case-role">${p.role}</p></div><div><h3>PROJECT TYPE</h3><p>${p.type}</p></div><div><h3>STATUS</h3><p>${p.status}</p></div><div><h3>TECHNOLOGY STACK</h3><div class="tags">${p.stack.map(s => `<span>${s}</span>`).join('')}</div></div>${p.repo ? `<div><h3>EXPLORE THE CODE</h3><a href="${p.repo}" target="_blank" rel="noopener">View repository ${icon('arrow-up-right')}</a></div>`:''}</aside><div class="case-story"><div class="case-tabs" role="tablist" aria-label="Case study sections"><button type="button" id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" data-tab="overview">Overview</button><button type="button" id="tab-build" role="tab" aria-selected="false" aria-controls="panel-build" tabindex="-1" data-tab="build">The build</button><button type="button" id="tab-notes" role="tab" aria-selected="false" aria-controls="panel-notes" tabindex="-1" data-tab="notes">Reflections</button></div>${['overview','build','notes'].map((tab,i) => `<div role="tabpanel" id="panel-${tab}" aria-labelledby="tab-${tab}" tabindex="0" ${i?'hidden':''}>${tab==='build'&&p.architecture?renderArchitecture(p.architecture):''}${renderStory(p[tab])}</div>`).join('')}</div></div>`;
+    <div class="case-body"><aside class="case-meta" aria-label="Project details"><div><h3>MY ROLE</h3><p class="case-role">${p.role}</p></div><div><h3>PROJECT TYPE</h3><p>${p.type}</p></div><div><h3>STATUS</h3><p>${p.status}</p></div><div><h3>TECHNOLOGY STACK</h3><div class="tags">${p.stack.map(s => `<span>${s}</span>`).join('')}</div></div>${p.repo ? `<div><h3>EXPLORE THE CODE</h3><a href="${p.repo}" target="_blank" rel="noopener">View repository ${icon('arrow-up-right')}</a></div>`:''}</aside><div class="case-story">${renderVerification(p)}<div class="case-tabs" role="tablist" aria-label="Case study sections"><button type="button" id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" data-tab="overview">Overview</button><button type="button" id="tab-build" role="tab" aria-selected="false" aria-controls="panel-build" tabindex="-1" data-tab="build">The build</button><button type="button" id="tab-notes" role="tab" aria-selected="false" aria-controls="panel-notes" tabindex="-1" data-tab="notes">Reflections</button></div>${['overview','build','notes'].map((tab,i) => `<div role="tabpanel" id="panel-${tab}" aria-labelledby="tab-${tab}" tabindex="0" ${i?'hidden':''}>${tab==='build'&&p.architecture?renderArchitecture(p.architecture):''}${renderStory(p[tab])}</div>`).join('')}</div></div>`;
   updateGallery();
   content.querySelectorAll('[data-tab]').forEach(button => {
     button.addEventListener('click', () => activateTab(button.dataset.tab));
